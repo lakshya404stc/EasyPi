@@ -13,7 +13,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   description,
 }) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md min-w-[380px] max-w-[380px] text-center">
+    <div className="bg-white p-6 rounded-lg shadow-md sm:min-w-[380px] max-w-[380px] text-center">
       <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
         <Activity className="text-2xl font-bold text-purple-600" />
       </div>
@@ -41,7 +41,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
 }) => {
   return (
     <div
-      className={`bg-gray-100 flex flex-col justify-between min-w-[380px] max-w-[380px] p-8 rounded-lg shadow-md ${
+      className={`bg-gray-100 flex flex-col justify-between sm:min-w-[380px] max-w-[380px] p-8 rounded-lg shadow-md ${
         highlighted ? "border-2 border-indigo-500 relative" : ""
       }`}
     >

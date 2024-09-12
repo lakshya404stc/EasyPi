@@ -8,15 +8,17 @@ export default function PricingPage() {
 
   return (
     <div className="min-h-screen bg-white font-sans">
-      <div className="mx-auto py-[70px] bg-gray-100">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
-          Choose the Right Plan for Your Career
-        </h2>
-        <p className="text-xl text-center text-gray-600 mb-12">
-          Unlock the power of AI to supercharge your job search
-        </p>
-
-        <div className="flex justify-center">
+      <section className="bg-gradient-to-r from-purple-700 to-indigo-800 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Choose the Right Plan for Your Career
+              </h1>
+              <p className="text-xl mb-8">
+                revolutionize your job search. Automate applications,
+                Unlock the power of AI to supercharge your job search
+              </p>
+              <div className="flex justify-center">
           <div className="bg-white rounded-full p-1 shadow-md">
             <button
               className={`px-6 py-2 rounded-full ${
@@ -40,7 +42,9 @@ export default function PricingPage() {
             </button>
           </div>
         </div>
-      </div>
+            </div>
+          </div>
+        </section>
 
       <div className="w-full bg-white flex flex-wrap justify-center gap-5 py-[70px]">
         <PricingCard

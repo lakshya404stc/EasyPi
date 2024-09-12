@@ -77,7 +77,7 @@ export default function Page() {
               </div>
               <div className="">
                 <Image
-                  className="h-[340px] shadow object-contain rounded-lg sm:flex-1 w-full"
+                  className="md:h-[340px] sm:shadow rounded-lg sm:flex-1 w-full"
                   src={image}
                   alt="ai"
                 />
