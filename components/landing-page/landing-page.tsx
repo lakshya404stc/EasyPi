@@ -11,7 +11,6 @@ interface FeatureCardProps {
 const FeatureCard: React.FC<FeatureCardProps> = ({
   title,
   description,
-  icon: Icon,
 }) => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md min-w-[380px] max-w-[380px] text-center">
@@ -82,7 +81,7 @@ interface TestimonialCardProps {
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, author }) => {
   return (
     <div className="bg-white min-w-[300px] max-w-[400px] p-6 rounded-lg shadow-md flex flex-col justify-between">
-      <p className="text-gray-600 mb-4">"{quote}"</p>
+      <p className="text-gray-600 mb-4">&quot;{quote}&quot;</p>
       <p className="font-semibold text-gray-800 justify-end">- {author}</p>
     </div>
   );

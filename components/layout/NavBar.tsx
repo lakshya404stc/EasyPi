@@ -1,5 +1,5 @@
 "use client";
-import { Home, Plus } from "lucide-react";
+import { Home } from "lucide-react";
 import React from "react";
 
 const NavBar = () => {

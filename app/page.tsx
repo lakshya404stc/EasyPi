@@ -1,7 +1,6 @@
 import {
   FAQItem,
   FeatureCard,
-  PricingCard,
   TestimonialCard,
 } from "@/components/landing-page/landing-page";
 import { faqs, features, testimonials } from "./dummyData";
@@ -68,10 +67,10 @@ export default function Page() {
             <div className="max-w-5xl mx-auto text-center flex items-center justify-center flex-wrap md:gap-40 ">
               <div className="sm:flex-1 w-full">
                 <h2 className="text-3xl font-semibold text-gray-800 mb-6">
-                  We're Here for You
+                  We&apos;re Here for You
                 </h2>
                 <p className="text-xl text-gray-600 mb-8">
-                  Job hunting doesn't have to be a full-time job. Let Easy Pi
+                  Job hunting doesn&apos;t have to be a full-time job. Let Easy Pi
                   handle the tedious parts while you focus on preparing for
                   interviews and advancing your career.
                 </p>
