@@ -1,35 +1,16 @@
 "use client";
-import { Home } from "lucide-react";
+import { ContactRound, Home } from "lucide-react";
 import React from "react";
+import { Logo } from "../Logo";
 
 const NavBar = () => {
   return (
     <header className="bg-white shadow-sm">
       <div className="mx-auto px-10 py-3 flex justify-between items-center">
-        <a href="/" className="text-2xl font-semibold text-gray-800">
-          <img src="/assets/img/logo2.png" className="h-[50px]"/>
-        </a>
-        <div className="md:flex items-center h-full gap-7 hidden">
-          <div>
-            <a
-              href="#how-it-works"
-              className="text-gray-600 hover:text-gray-800"
-            >
-              Contact
-            </a>
-          </div>
-          <div>
-            <a href="#features" className="text-gray-600 hover:text-gray-800">
-              Features
-            </a>
-          </div>
-          <div>
-            <a href="#pricing" className="text-gray-600 hover:text-gray-800">
-              Pricing
-            </a>
-          </div>
-          <div className="rounded-full bg-purple-100 p-2 text-purple-600">
-            <Home size={20} />
+        <Logo/>
+        <div className="items-center h-full gap-7">
+          <div className="rounded-full bg-indigo-100 p-2 text-indigo-700">
+            <ContactRound size={25} />
           </div>
         </div>
       </div>

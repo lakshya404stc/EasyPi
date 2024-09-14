@@ -34,7 +34,7 @@ export const features = [
     },
     {
       quote:
-        "As a recent graduate, Easy Pi gave me the edge I needed in a competitive job market.",
+        "As a recent graduate, Easy Pi gave me the edge I needed in a competitive job market making me stand out",
       author: "Emily T., Business Analyst",
     },
   ];
@@ -59,5 +59,54 @@ export const features = [
       question: "What if I want to cancel my subscription?",
       answer:
         "You can cancel your subscription at any time. We offer a 30-day money-back guarantee if you're not satisfied with our service.",
+    },
+  ];
+
+  export const pricingPlans = [
+    {
+      title: "Basic",
+      price: "$9.99",
+      features: [
+        "50 automated job applications",
+        "5 custom CV generations",
+        "Basic AI matching",
+        "Application tracking",
+      ],
+    },
+    {
+      title: "Pro",
+      price: "$19.99",
+      features: [
+        "150 automated job applications",
+        "15 custom CV generations",
+        "Advanced AI matching",
+        "Application tracking",
+      ],
+      highlighted: true,
+    },
+    {
+      title: "Enterprise",
+      price: "$49.99",
+      features: [
+        "Unlimited automated job applications",
+        "Unlimited custom CV generations",
+        "Premium AI matching",
+        "Application tracking",
+      ],
+    },
+  ]
+
+  export const stepsData = [
+    {
+      title: "Create Your Profile",
+      description: "Input your skills, experience, and preferences to create a comprehensive profile.",
+    },
+    {
+      title: "AI-Powered Job Matching",
+      description: "Our AI scans job boards and matches you with suitable positions based on your profile.",
+    },
+    {
+      title: "Automated Applications",
+      description: "Easy Pi applies to matched positions on your behalf, saving you time and effort.",
     },
   ];

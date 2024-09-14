@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { Activity, Check, ChevronDown, LucideIcon } from "lucide-react";
+import { Activity, Check, ChevronDown, LucideIcon, SquareChevronRight } from "lucide-react";
+import { CardSubtitle, CardTitle } from "../shorts/Card";
 
 interface FeatureCardProps {
   title: string;
@@ -8,17 +9,14 @@ interface FeatureCardProps {
   icon?: LucideIcon;
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({
-  title,
-  description,
-}) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({ title, description }) => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md sm:min-w-[380px] max-w-[380px] text-center">
       <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
         <Activity className="text-2xl font-bold text-purple-600" />
       </div>
-      <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <CardTitle value={title} className="text-center"/>
+      <CardSubtitle value={description} className="text-center"/>
     </div>
   );
 };
@@ -41,7 +39,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
 }) => {
   return (
     <div
-      className={`bg-gray-100 flex flex-col justify-between sm:min-w-[380px] max-w-[380px] p-8 rounded-lg shadow-md ${
+      className={`bg-white flex flex-col justify-between sm:min-w-[350px] max-w-[380px] px-8 py-5 rounded-lg shadow-md mx-5 ${
         highlighted ? "border-2 border-indigo-500 relative" : ""
       }`}
     >
@@ -52,20 +50,20 @@ const PricingCard: React.FC<PricingCardProps> = ({
           </span>
         )}
         <h3 className="text-2xl font-semibold text-gray-800 mb-4">{title}</h3>
-        <p className="text-4xl font-bold text-indigo-600 mb-6">
+        <p className="text-3xl font-bold text-indigo-600 mb-6">
           {price}
           <span className="text-lg font-normal text-gray-600">/month</span>
         </p>
         <ul className="space-y-3 mb-8">
           {features.map((feature, index) => (
-            <li key={index} className="flex items-center text-gray-600">
-              <Check className="w-5 h-5 text-green-500 mr-2" />
+            <li key={index} className="flex gap-3 items-center text-gray-700 item-center">
+              <SquareChevronRight size={15} className="text-indigo-600"/>
               <span>{feature}</span>
             </li>
           ))}
         </ul>
       </div>
-      <button className="w-full bg-indigo-600 text-white py-2 rounded-full font-semibold hover:bg-indigo-700 transition duration-300">
+      <button className="w-full bg-indigo-600 text-white py-2 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300">
         Choose Plan
       </button>
     </div>
@@ -81,8 +79,8 @@ interface TestimonialCardProps {
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, author }) => {
   return (
     <div className="bg-white min-w-[300px] max-w-[400px] p-6 rounded-lg shadow-md flex flex-col justify-between">
-      <p className="text-gray-600 mb-4">&quot;{quote}&quot;</p>
-      <p className="font-semibold text-gray-800 justify-end">- {author}</p>
+      <p className="text-gray-700 mb-4">&quot;{quote}&quot;</p>
+      <p className="font-semibold text-gray-800 text-right">- {author}</p>
     </div>
   );
 };
@@ -109,9 +107,27 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
           }`}
         />
       </button>
-      {isOpen && <p className="mt-2 text-gray-600">{answer}</p>}
+      {isOpen && <p className="mt-2 text-gray-700">{answer}</p>}
     </div>
   );
 };
 
-export { FeatureCard, PricingCard, TestimonialCard, FAQItem };
+interface StepsComponentProps {
+  title:string,
+  index:number,
+  description:string
+}
+
+const StepsComponent: React.FC<StepsComponentProps> = ({ title, index, description }) => {
+  return (
+    <div key={index} className="text-center min-w-[300px] max-w-[400px]">
+      <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+        <span className="text-2xl font-bold text-purple-600">{index + 1}</span>
+      </div>
+      <CardTitle value={title} className="text-center" />
+      <CardSubtitle value={description} className="text-center"/>
+    </div>
+  );
+};
+
+export { FeatureCard, PricingCard, TestimonialCard, FAQItem, StepsComponent };
