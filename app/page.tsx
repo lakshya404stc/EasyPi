@@ -72,6 +72,7 @@ export default function Page() {
                   title={step.title}
                   description={step.description}
                   key={index}
+                  step={index+1}
                 />
               ))}
             </div>

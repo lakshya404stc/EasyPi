@@ -43,7 +43,7 @@ export default function PricingPage() {
         </div>
       </BannerWrapper>
 
-      <div className="w-full bg-gray-100 flex flex-wrap justify-center pt-[70px] pb-[40px]">
+      <div className="w-full bg-gray-100 flex flex-wrap justify-center pt-[70px] pb-[40px] md:gap-0 gap-5">
         {pricingPlans.map((plan, index) => (
           <PricingCard
             key={index}
