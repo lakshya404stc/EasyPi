@@ -114,14 +114,13 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
 
 interface StepsComponentProps {
   title:string,
-  key:any,
   description:string
   step:number
 }
 
-const StepsComponent: React.FC<StepsComponentProps> = ({ title, key, description, step }) => {
+const StepsComponent: React.FC<StepsComponentProps> = ({ title, description, step }) => {
   return (
-    <div key={key} className="text-center min-w-[300px] max-w-[400px]">
+    <div className="text-center min-w-[300px] max-w-[400px]">
       <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
         <span className="text-2xl font-bold text-purple-600">{step}</span>
       </div>
