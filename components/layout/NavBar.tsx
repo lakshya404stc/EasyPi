@@ -1,5 +1,5 @@
 "use client";
-import { ContactRound, Home } from "lucide-react";
+import { ContactRound } from "lucide-react";
 import React from "react";
 import { Logo } from "../Logo";
 

@@ -71,7 +71,7 @@ export default function Page() {
                 <StepsComponent
                   title={step.title}
                   description={step.description}
-                  index={index}
+                  key={index}
                 />
               ))}
             </div>

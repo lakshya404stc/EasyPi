@@ -7,10 +7,9 @@ interface ButtonProps {
   inverted?: boolean;
   text: string;
   type?: "button" | "submit" | "reset";
-  onClick?: () => void;
 }
 
-export const Button: React.FC<ButtonProps> = ({ inverted = false, text, onClick, type = "button" }) => {
+export const Button: React.FC<ButtonProps> = ({ inverted = false, text, type = "button" }) => {
   const router = useRouter();
 
   const buttonClass = !inverted
