@@ -1,10 +1,9 @@
 import {
-  FAQItem,
   FeatureCard,
   StepsComponent,
   TestimonialCard,
 } from "@/components/landing-page/landing-page";
-import { faqs, features, stepsData, testimonials } from "./dummyData";
+import { features, stepsData, testimonials } from "./dummyData";
 import Image from "next/image";
 import image from "../public/assets/img/image.png";
 import { BannerSubtitle, BannerTitle } from "@/components/shorts/Banner";
