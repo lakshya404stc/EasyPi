@@ -11,6 +11,8 @@ import { BannerSubtitle, BannerTitle } from "@/components/shorts/Banner";
 import { BannerWrapper } from "@/components/wrappers/BannerWrapper";
 import { Button } from "@/components/fields/Button";
 import { Title, TitleContent } from "@/components/shorts/Title";
+import { FooterBannerWrapper } from "@/components/wrappers/FooterBannerWrapper";
+import { BannerPolygon } from "@/components/landing-page/BannerPolygon";
 
 export default function Page() {
   return (
@@ -25,7 +27,7 @@ export default function Page() {
           <Button inverted text="Go To Dashboard" />
         </BannerWrapper>
 
-        <section id="features" className="py-[70px]">
+        <section id="features" className="pb-[70px] pt-[50px] bg-gray-100">
           <div className="container mx-auto px-4">
             <Title value="Features" />
             <div className="flex flex-wrap items-center justify-center flex gap-10">
@@ -40,7 +42,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="bg-gray-100 py-[30px]">
+        <section className="bg-white py-[30px]">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto text-center flex items-center justify-center flex-wrap md:gap-40 ">
               <div className="sm:flex-1 w-full">
@@ -63,30 +65,28 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="how-it-works" className="hidden md:block py-[70px]">
+
+        <section id="how-it-works" className="pb-[70px] pt-[40px]  bg-white">
           <div className="container mx-auto px-4">
-            <Title value="How Easy Pi Works ?" />
+            {/* <Title value="How Easy Pi Works ?" /> */}
+            <BannerPolygon className="mb-20 mt-0 px-0"/>
             <div className="flex flex-wrap items-center justify-center flex gap-10">
               {stepsData.map((step, index) => (
                 <StepsComponent
                   title={step.title}
                   description={step.description}
                   key={index}
-                  step={index+1}
+                  step={index + 1}
                 />
               ))}
             </div>
           </div>
         </section>
 
-        <section
-          id="pricing"
-          className="w-full bg-gray-100 py-[20px] flex items-center justify-center"
-        >
-          <Button text="Choose Your Plan" />
-        </section>
 
-        <section id="testimonials" className="py-[70px]">
+
+
+        <section id="testimonials" className="pb-[80px] pt-[60px] bg-gray-100">
           <div className="container mx-auto px-4">
             <Title value="What Our Users Say ?" />
             <div className="w-full flex flex-wrap items-center justify-center gap-5">
@@ -101,35 +101,25 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="faq" className="bg-gray-100 py-[70px]">
-          <div className="container mx-auto px-4">
-            <Title value="Frequently Asked Questions" />
-            <div className="max-w-3xl mx-auto">
-              {faqs.map((faq, index) => (
-                <FAQItem
-                  key={index}
-                  question={faq.question}
-                  answer={faq.answer}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* <section
+          id="pricing"
+          className="w-full bg-gray-100 py-[20px] flex items-center justify-center"
+        >
+          <Button text="Choose Your Plan" />
+        </section> */}
 
-        <section className="bg-indigo-800 text-white py-[50px]">
-          <div className="container mx-auto px-4 text-center">
-            <Title
-              className="text-white"
-              value="Ready to Transform Your Job Search ?"
-            />
-            <TitleContent
-              className="text-white"
-              value="Join thousands of job seekers who have already found success with
+        <FooterBannerWrapper>
+          <Title
+            className="text-white"
+            value="Ready to Transform Your Job Search ?"
+          />
+          <TitleContent
+            className="text-white"
+            value="Join thousands of job seekers who have already found success with
               Easy Pi."
-            />
-            <Button text="Start Your Free Trial" inverted />
-          </div>
-        </section>
+          />
+          <Button text="Start Your Free Trial" inverted />
+        </FooterBannerWrapper>
       </main>
     </div>
   );
