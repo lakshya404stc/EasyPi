@@ -85,7 +85,7 @@ export default function Page() {
 
 
 
-        <section id="testimonials" className="pb-[80px] pt-[60px] bg-gray-100">
+        <section id="testimonials" className="hidden md:block pb-[80px] pt-[60px] bg-gray-100">
           <div className="container mx-auto px-4">
             <Title value="What Our Users Say ?" />
             <div className="w-full flex flex-wrap items-center justify-center gap-5">
